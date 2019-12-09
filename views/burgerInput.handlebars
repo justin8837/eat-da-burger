@@ -1,0 +1,18 @@
+<div>
+    <div id="devourBurgers">
+        {{#each burgers}}
+        {{#if devour}}
+        <p>{{name}}</p>
+        <button id={{id}} class="devour">{{devour}}</button>
+        {{/if}}
+        {{/each}}
+    </div>
+    <div id="burger">
+        {{#each burgers}}
+        {{#unless devour}}
+        <p>{{name}}</p>
+        <button id={{id}} class="devour">{{devour}}</button>
+        {{/unless}}
+        {{/each}}
+    </div>
+</div>
