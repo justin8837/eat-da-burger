@@ -1,11 +1,13 @@
 console.log("hello");
-$(".save").on("click", function(result) {
+$("#save").on("click", function(result) {
+  let burgerName = $("#burgerName").val();
   $.ajax({
-    url: "/api/save/" + this.id,
-    method: "put",
-    data: { devour: false }
+    url: "/api/burgers",
+    method: "post",
+    data: { burgerName }
   }).then(function(end) {
     console.log(end);
+    window.location.reload();
   });
 });
 $(".devour").on("click", function(event) {
@@ -15,5 +17,6 @@ $(".devour").on("click", function(event) {
     data: { devour: true }
   }).then(function(result) {
     console.log("it works");
+    window.location.reload();
   });
 });
