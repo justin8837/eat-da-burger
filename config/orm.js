@@ -1,3 +1,5 @@
+let connection = require("./connection");
+//create orm for selecting all, updating one, and inserting one
 let orm = {
   all: function(cb) {
     connection.query("SELECT * FROM burger", function(err, res) {
