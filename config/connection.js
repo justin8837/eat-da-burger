@@ -10,7 +10,7 @@ if (process.env.JAWSDB_URL) {
     port: 3306,
     user: process.env.user,
     password: process.env.password,
-    database: "burgers_db"
+    database: "odjcyugxhnkoduzb"
   });
 }
 connection.connect();
